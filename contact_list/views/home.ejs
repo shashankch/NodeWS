@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%=locals.title %></title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/home.css" />
+  </head>
+  <body>
+    <h1 id="page-heading">
+      <i class="far fa-address-book"></i>
+      My Contacts List
+    </h1>
+
+    <div id="contact-list-container">
+      <ul>
+        <% for(let i of contact_list) { %>
+
+        <li class="contact">
+          <div class="details">
+            <p><%=i.name%></p>
+            <p><%=i.phone%></p>
+          </div>
+          <div class="delete-button">
+            <!-- <a href="/delete-contact/<%=i.phone%>"> -->
+            <a href="/delete-contact/?id=<%=i._id%>">
+              <!-- <a href="/delete-contact/?phone=<%=i.phone%>&name=<%=i.name%>"> -->
+              <i class="fas fa-window-close"></i>
+            </a>
+          </div>
+        </li>
+
+        <% } %>
+      </ul>
+    </div>
+
+    <form id="new-contact-form" action="/create-contact" method="POST">
+      <input type="text" name="name" placeholder="enter name" required />
+      <input type="number" name="phone" placeholder="enter phone" required />
+      <button type="submit">ADD Contact</button>
+    </form>
+    <script type="text/javascript" src="/js/home.js"></script>
+  </body>
+</html>
