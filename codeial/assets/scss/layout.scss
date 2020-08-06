@@ -3,10 +3,13 @@ body {
   height: 100vh;
   /* text-align: center; */
   background-color: skyblue;
-  color: white; }
-  body #layout-main {
+  color: white;
+
+  #layout-main {
     height: 100%;
     border: 1px solid white;
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+  }
+}
