@@ -1,0 +1,21 @@
+#main-container {
+  display: flex;
+  background-color: #758aa2;
+  justify-content: space-around;
+  align-items: center;
+  #first-part {
+    font-size: 20px;
+  }
+
+  #second-part {
+    ul {
+      list-style: none;
+      li {
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+  }
+}

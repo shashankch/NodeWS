@@ -1,0 +1,19 @@
+#navbar-container {
+  display: flex;
+  border: 1px solid red;
+  align-items: center;
+  background-color: #0a79df;
+  justify-content: space-between; }
+  #navbar-container #navbar-brand {
+    padding-left: 30px;
+    font-weight: 500;
+    font-size: 30px; }
+  #navbar-container #navbar-links {
+    padding-right: 30px; }
+    #navbar-container #navbar-links ul {
+      list-style: none; }
+      #navbar-container #navbar-links ul li {
+        display: inline; }
+        #navbar-container #navbar-links ul li a {
+          text-decoration: none;
+          color: white; }
