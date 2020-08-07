@@ -2,14 +2,15 @@ body {
   margin: 0;
   height: 100vh;
   /* text-align: center; */
-  background-color: skyblue;
-  color: white;
+  // background-color: skyblue;
+  // color: white;
 
   #layout-main {
     height: 100%;
     border: 1px solid white;
     display: flex;
-    // align-items: center;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: space-evenly;
   }
 }
