@@ -1,4 +1,4 @@
-const Post = require("../models/post");
+const Post = require('../models/post');
 
 // module.exports.post = function (req, res) {
 //   res.end("<h1>your post is saved  successfully</h1>");
@@ -12,11 +12,11 @@ module.exports.create = function (req, res) {
     },
     function (err, post) {
       if (err) {
-        console.log("error in creating a post");
+        console.log('error in creating a post');
         return;
       }
 
-      return res.redirect("back");
-    }
+      return res.redirect('back');
+    },
   );
 };

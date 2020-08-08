@@ -9,7 +9,7 @@
 
    <%- include('_header'); %> -->
 
-<h1>Codeial /<%=title%></h1>
+<h1><%=title%></h1>
 <!-- <%- include('_footer'); %>
   
   
@@ -42,6 +42,21 @@
             <%=post.user.name%>
           </small>
         </p>
+        <div class="post-comments">
+          <% if(locals.user) {%>
+
+          <form action="/comments/create" method="post">
+            <input
+              type="text"
+              name="content"
+              placeholder="type here comment.."
+            />
+            <input type="hidden" name="post" value="<%= post._id %>" />
+            <input type="submit" value="Add Comment" />
+          </form>
+
+          <%}%>
+        </div>
       </li>
       <%}%>
     </ul>
