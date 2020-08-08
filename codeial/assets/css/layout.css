@@ -10,5 +10,5 @@ body {
     align-items: center; }
   body .posts-list-container {
     overflow-y: scroll;
-    height: 750px;
-    width: 400px; }
+    height: 500px;
+    width: 500px; }
