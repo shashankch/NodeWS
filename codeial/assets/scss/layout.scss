@@ -13,4 +13,10 @@ body {
     align-items: center;
     // justify-content: space-evenly;
   }
+
+  .posts-list-container {
+    overflow-y: scroll;
+    height: 750px;
+    width: 400px;
+  }
 }
