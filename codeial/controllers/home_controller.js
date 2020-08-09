@@ -55,7 +55,7 @@ module.exports.home = async function (req, res) {
         },
       });
     let users = await User.find({});
-    req.flash('success', 'Posts refresh success!');
+    // req.flash('success', 'Posts refresh success!');
     return res.render('home', {
       title: 'Codeial|Home',
       posts: posts,
