@@ -6,17 +6,6 @@ body {
   // color: white;
 
   #layout-main {
-    height: 100%;
-    border: 1px solid white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    // justify-content: space-evenly;
-  }
-
-  .posts-list-container {
-    overflow-y: scroll;
-    height: 500px;
-    width: 500px;
+    height: 100vh;
   }
 }
