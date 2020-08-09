@@ -1,6 +1,5 @@
 #navbar-container {
   display: flex;
-  border: 1px solid red;
   align-items: center;
   background-color: #0a79df;
   justify-content: space-between; }
