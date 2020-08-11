@@ -33,7 +33,7 @@
       <input type="submit" value="Post" />
     </form>
     <%}%>
-    <div class="posts-list-container">
+    <div id="posts-list-container">
       <ul>
         <% for(post of posts) {%> <%- include('_post')%> <%}%>
       </ul>
@@ -52,3 +52,5 @@
     <%}%>
   </section>
 </div>
+<script src="/js/home_comments.js"></script>
+<script src="/js/home_posts.js"></script>
