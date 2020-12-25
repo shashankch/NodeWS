@@ -1,12 +1,11 @@
-#main-container {
+#layout-footer {
+  color: white;
+  background: grey;
+  padding: 5px 10px;
   display: flex;
-  background-color: #0a79df;
-  justify-content: space-around;
-  align-items: center; }
-  #main-container #first-part {
-    font-size: 20px; }
-  #main-container #second-part ul {
+  justify-content: flex-start; }
+  #layout-footer a {
+    color: white;
+    text-decoration: none; }
+  #layout-footer .footer-nav ul {
     list-style: none; }
-    #main-container #second-part ul li a {
-      text-decoration: none;
-      color: white; }

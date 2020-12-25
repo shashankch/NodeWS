@@ -3,16 +3,15 @@ const mongoose = require('mongoose');
 const likeSchema = new mongoose.Schema(
   {
     user: {
-      type: mongoose.Schema.Types.ObjectId,
+      type: mongoose.Schema.ObjectId,
     },
-
-    // here it defines object id of liked object
+    // this defines the object id of the liked object
     likeable: {
-      type: mongoose.Schema.Types.ObjectId,
-      required: true,
+      type: mongoose.Schema.ObjectId,
+      require: true,
       refPath: 'onModel',
     },
-    // defines the type of liked object (dynamic ref)
+    // this field is used for defining the type of the liked object since this is a dynamic reference
     onModel: {
       type: String,
       required: true,

@@ -11,7 +11,6 @@ const userSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
-
     password: {
       type: String,
       required: true,
@@ -21,29 +20,34 @@ const userSchema = new mongoose.Schema(
       required: true,
     },
     avatar: {
-      type:String
-    }
+      type: String,
+    },
+    friendships: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Friendship',
+      },
+    ],
   },
   {
     timestamps: true,
-  },
+  }
 );
 
 let storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null,path.join(__dirname, '..',AVATAR_PATH));
+    cb(null, path.join(__dirname, '..', AVATAR_PATH));
   },
   filename: function (req, file, cb) {
     cb(null, file.fieldname + '-' + Date.now());
   },
 });
 
-// var upload = multer({ storage: storage });
-// static function uploadedAvatar defined here
-// .single results in single file upload instead of multiple uploads
-userSchema.statics.uploadedAvatar = multer({ storage: storage }).single('avatar');
+// static
+userSchema.statics.uploadedAvatar = multer({ storage: storage }).single(
+  'avatar'
+);
 userSchema.statics.avatarPath = AVATAR_PATH;
-// here static to make path public available to controller whenever needed..
 
 const User = mongoose.model('User', userSchema);
 
