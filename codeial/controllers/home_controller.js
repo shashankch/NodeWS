@@ -54,7 +54,11 @@ module.exports.home = async function (req, res) {
         populate: {
           path: 'user',
         },
-      });
+        populate: {
+          path: 'likes',
+        },
+      })
+      .populate('likes');
     let users = await User.find({});
     // req.flash('success', 'Posts refresh success!');
     return res.render('home', {
